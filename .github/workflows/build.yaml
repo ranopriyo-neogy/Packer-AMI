@@ -1,13 +1,13 @@
 name: Packer
 
 on:
-  paths-ignore:
+  push:
+    paths-ignore:
       - README.md
       - vars.json
-  push:
     branches:
       - master
-  
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
