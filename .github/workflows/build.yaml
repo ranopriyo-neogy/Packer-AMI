@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
-        run:
+        script:
            - echo "Fetching packer"
            - wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip
            - unzip packer_1.5.5_linux_amd64.zip
