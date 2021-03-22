@@ -1,14 +1,26 @@
+stages:
+  - build
+  - deploy
 
-jobs: 
-  build-image: 
-    name: "Bulid AMI"
-    runs-on: ubuntu-latest
-    steps: 
-      - 
-        id: build
-        run: "packer build -var-file=vars.json template.json"
-name: Build
-true: 
-  push: 
-    branches: 
-      - master
+image: alpine
+
+before_script:
+  - git config --global http.sslVerify false
+
+get_packer:
+  stage: build
+  artifacts:
+    paths:
+    - packer
+  script:
+    - echo "Fetching packer"
+    - wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip
+    - unzip packer_1.5.5_linux_amd64.zip
+    - chmod +x packer
+
+deploy_centos-8:
+  stage: deploy
+  script:
+    - echo "Deploying CentOS 8"
+    - cd centos-8
+    - ../packer build -force -var-file vars.json template.json
