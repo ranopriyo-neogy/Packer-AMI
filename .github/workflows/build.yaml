@@ -6,11 +6,9 @@ on:
       - master
 
 jobs:
-  terraform-apply:
-    name: 'PackerBuild'
+  echo-input:
     runs-on: ubuntu-latest
-
- steps:
+    steps:
       - uses: actions/github-script@v3
         with:
           script: 
