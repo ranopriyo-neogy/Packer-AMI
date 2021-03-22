@@ -10,6 +10,7 @@ stages:
 
 image: alpine
 
+jobs: 
 before_script:
   - git config --global http.sslVerify false
 
