@@ -27,7 +27,7 @@
       "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "packer-example {{timestamp}}",
     "tags":{
-    "Name": "pivotree-packer - {{timestamp}}"
+    "Name": "pivotree-packer-test - {{timestamp}}"
     }
     }
   ],

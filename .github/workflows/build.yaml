@@ -1,0 +1,14 @@
+
+jobs: 
+  build-image: 
+    name: "Bulid AMI"
+    runs-on: ubuntu-latest
+    steps: 
+      - 
+        id: build
+        run: "packer build -var-file=vars.json template.json"
+name: Build
+true: 
+  push: 
+    branches: 
+      - master
