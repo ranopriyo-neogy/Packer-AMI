@@ -9,7 +9,7 @@ jobs:
   echo-input:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v3
+      - uses: actions/checkout@v2
         with:
           script: |
                 echo "Fetching packer"
