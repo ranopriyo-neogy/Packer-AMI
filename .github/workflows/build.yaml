@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: packer-test
         run: |
-                echo "Fetching packer"
-                echo "Testing output"
+          echo "Fetching packer"
+          echo "Testing output"
                
