@@ -5,8 +5,8 @@ on:
     branches:
       - master
     paths-ignore:
-      - '**/README.md'
-      - '**/vars.json'
+      - '**.md'
+      - 'vars.json'
 
 jobs:
   build-and-deploy:
