@@ -27,14 +27,20 @@
       "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "packer-example {{timestamp}}",
     "tags":{
-    "Name": "git-packer - {{timestamp}}"
+    "Name": "nginx-ami-packer - {{timestamp}}"
     }
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "script": "apache.sh" 
+      "script": "nginx.sh" 
+    },
+    {
+      "type": "goss",
+      "tests": [
+        "goss/goss.yaml"
+      ]
     }
   ]
 }
