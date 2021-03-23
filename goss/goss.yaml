@@ -1,7 +1,0 @@
-package:
-  nginx:
-    installed: true
-service:
-  nginx:
-    enabled: true
-    running: true
