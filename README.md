@@ -14,7 +14,6 @@ The pipeline gets triggered when there is a `push` on the master branch.
 }
 
 ```
-
 ## About
 
 - The configuration is integrated with [Goss](https://github.com/aelsabbahy/goss) for testing the Image.
