@@ -21,7 +21,7 @@ The pipeline gets triggered when there is a `push` on the master branch.
 - On Pull Request it validates the configuration based on the scripts mentioned in test.yaml file.
 - On Merge it builds the nginx image in configured AWS Account.
 
-## Run it Locally to test
+## Run it locally to test
 
 - Download and Install `Packer` [Click Here](https://www.packer.io/)
 - Install the binary `packer-provisioner-goss` [Click Here](https://github.com/YaleUniversity/packer-provisioner-goss/releases/tag/v3.0.2)
