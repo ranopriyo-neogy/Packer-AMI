@@ -35,6 +35,12 @@
     {
       "type": "shell",
       "script": "nginx.sh" 
+    },
+    {
+      "type": "goss",
+      "tests": [
+        "goss/goss.yaml"
+      ]
     }
   ]
 }
