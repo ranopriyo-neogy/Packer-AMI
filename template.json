@@ -27,7 +27,7 @@
       "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "packer-example {{timestamp}}",
     "tags":{
-    "Name": "nginx-ami-packer - {{timestamp}}"
+    "Name": "nginx-jun- {{timestamp}}"
     }
     }
   ],
@@ -41,6 +41,18 @@
       "tests": [
         "goss/goss.yaml"
       ]
+    }
+  ],
+
+  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "manifest.json",
+      "strip_path": true
+    },
+    {
+      "type": "shell-local",
+      "script": "postprocessors/share-ami-with-awsaccounts.sh"
     }
   ]
 }
